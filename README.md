@@ -19,7 +19,7 @@ Neste exercício, você irá:
 
 ### Como iniciar este exercício
 
-> [!IMPORTANT]
+> [!IMPORTANTE]
 > Este exercício pressupõe conhecimento básico do [GitHub Copilot](https://github.com/features/copilot). Se você não estiver familiarizado, recomendamos o exercício [Primeiros Passos com Copilot](https://github.com/skills/getting-started-with-github-copilot).
 
 Simplesmente copie o exercício para sua conta, então dê ao seu Octocat favorito (Mona) **cerca de 20 segundos** para preparar a primeira lição, depois **atualize a página**.
