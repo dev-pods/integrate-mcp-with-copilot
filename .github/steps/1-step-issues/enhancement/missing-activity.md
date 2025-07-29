@@ -1,22 +1,22 @@
-# 🚨 Missing Activity: GitHub Skills
+# 🚨 Atividade Faltando: GitHub Skills
 
-The GitHub Skills activity announced by our principal is missing from the school activities signup page.
+A atividade GitHub Skills anunciada pelo nosso diretor está faltando na página de inscrições das atividades escolares.
 
-Yesterday in the school assembly, the principal announced a new partnership with GitHub to teach students practical coding and collaboration skills. However, when I try to sign up for this activity, I can't find it on the website.
+Ontem na assembleia da escola, o diretor anunciou uma nova parceria com o GitHub para ensinar aos estudantes habilidades práticas de programação e colaboração. No entanto, quando tento me inscrever nesta atividade, não consigo encontrá-la no site.
 
-I can see several other activities, like these, so I think I have access.
+Posso ver várias outras atividades, como estas, então acho que tenho acesso.
 
-- ✅ Chess Club
-- ✅ Programming Class
-- ✅ Gym Class
+- ✅ Clube de Xadrez
+- ✅ Aula de Programação
+- ✅ Aula de Educação Física
 
-## ⏱️ Timeline
+## ⏱️ Cronograma
 
-This is time-sensitive as the announcement mentioned registrations would close by the end of this week. Many students are eager to join. It's the first part of our [GitHub Certifications program](https://resources.github.com/learn/certifications/), which will help with college applications.
+Isso é urgente pois o anúncio mencionou que as inscrições fechariam até o final desta semana. Muitos estudantes estão ansiosos para participar. É a primeira parte do nosso [programa de Certificações GitHub](https://resources.github.com/learn/certifications/), que ajudará com as candidaturas universitárias.
 
-## 💡 Expected Outcome
+## 💡 Resultado Esperado
 
-The GitHub Skills activity should be added to the system and available for registration like other activities
+A atividade GitHub Skills deve ser adicionada ao sistema e disponível para inscrição como outras atividades
 
 Hewbie C.
-11th Grade Student
+Estudante do 11º ano

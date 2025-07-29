@@ -1,43 +1,43 @@
-## Step 4: Validating AI-generated code
+## Passo 4: Validando código gerado por IA
 
-Great work on implementing that issue! Our extracurricular activities site is getting better every day! 💚
+Ótimo trabalho implementando aquela issue! Nosso site de atividades extracurriculares está melhorando a cada dia! 💚
 
-While AI assistants like GitHub Copilot can dramatically improve productivity, it's essential to remember that **_you_** are responsible for reviewing and validating all work, generated or not.
+Embora assistentes de IA como o GitHub Copilot possam melhorar drasticamente a produtividade, é essencial lembrar que **_você_** é responsável por revisar e validar todo o trabalho, gerado ou não.
 
 > [!tip]
-> In real projects, many teams use [GitHub Actions](https://github.com/features/actions) to setup automated testing.
+> Em projetos reais, muitas equipes usam [GitHub Actions](https://github.com/features/actions) para configurar testes automatizados.
 
-### :keyboard: Activity: Review and merge the AI solution
+### :keyboard: Atividade: Revisar e fazer merge da solução de IA
 
-1. Open the new pull request created by Copilot in a new tab.
+1. Abra o novo pull request criado pelo Copilot em uma nova aba.
 
-   [![Examine the pull request](https://img.shields.io/badge/-Open%20Pull%20Request-1f883d?logo=github)]({{{pull_request_url}}})
+   [![Examinar o pull request](https://img.shields.io/badge/-Abrir%20Pull%20Request-1f883d?logo=github)]({{{pull_request_url}}})
 
-   > ✨ **Bonus:** If your Copilot subscription provides it, you can also use a specialised version of Copilot to [review the changes](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review?tool=webui).
+   > ✨ **Bônus:** Se sua assinatura do Copilot fornece isso, você também pode usar uma versão especializada do Copilot para [revisar as mudanças](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review?tool=webui).
 
-1. Review the changes. When you are satisfied, merge the pull request.
+1. Revise as mudanças. Quando estiver satisfeito, faça merge do pull request.
 
-1. Return to VS code and the active **Copilot Chat** session.
+1. Retorne ao VS Code e à sessão ativa do **Copilot Chat**.
 
-   > 🚨 **Important:** If you previously clicked Done and need to return to a previous conversation, use the **Show Chats** button at the top of the Copilot Chat panel to restore it.
+   > 🚨 **Importante:** Se você clicou em Concluído anteriormente e precisa retornar a uma conversa anterior, use o botão **Mostrar Chats** no topo do painel Copilot Chat para restaurá-la.
 
-1. Ask Copilot to add a comment to the issue we just finished, and to say thanks for the comments and ideas.
+1. Peça ao Copilot para adicionar um comentário à issue que acabamos de finalizar, e para agradecer pelos comentários e ideias.
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Add a closing comment to the issue we just finished. Provide a 1 sentence description
-   > of the implemented solution and thank the commenters for their ideas and feedback.
+   > Adicione um comentário de fechamento à issue que acabamos de terminar. Forneça uma descrição de 1 frase 
+   > da solução implementada e agradeça aos comentaristas pelas suas ideias e feedback.
    > ```
 
    <details>
-   <summary>Having trouble? 🤷</summary><br/>
+   <summary>Tendo problemas? 🤷</summary><br/>
 
-   Some things to check
+   Algumas coisas para verificar
 
-   - Is your MCP Server still running?
-   - Check what information is passed to the MCP server calls - is Copilot using the correct repository?
-   - Did Copilot comment on the bug report?
+   - Seu Servidor MCP ainda está rodando?
+   - Verifique quais informações são passadas para as chamadas do servidor MCP - o Copilot está usando o repositório correto?
+   - O Copilot comentou no relatório de bug?
    </details>
 
-1. Once the comment has been created, Mona will start checking your work. Give her a moment to provide feedback or share the final review. Nice work! You're all done! 🎉
+1. Uma vez que o comentário tenha sido criado, a Mona começará a verificar seu trabalho. Dê um momento para ela fornecer feedback ou compartilhar a revisão final. Bom trabalho! Você terminou! 🎉

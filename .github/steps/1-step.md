@@ -1,20 +1,20 @@
-## Step 1: Introduction to MCP and environment setup
+## Passo 1: Introdução ao MCP e configuração do ambiente
 
 <img width="150" align="right" alt="copilot logo" src="https://github.com/user-attachments/assets/4d22496d-850b-4785-aafe-11cba03cd5f2" />
 
-In the [Getting Started with GitHub Copilot](https://github.com/skills/getting-started-with-github-copilot) exercise, we were introduced to the Mergington High School's extracurricular activities website, which allowed students to sign up for events.
+No exercício [Primeiros Passos com GitHub Copilot](https://github.com/skills/getting-started-with-github-copilot), fomos apresentados ao site de atividades extracurriculares da Mergington High School, que permitia aos estudantes se inscreverem em eventos.
 
-And now we have a problem... but.. it's a good one! More teachers are asking to use it! 🎉
+E agora temos um problema... mas... é um bom problema! Mais professores estão pedindo para usá-lo! 🎉
 
-Our fellow teachers have lots of ideas but we can't seem to keep up with all the requests! 😮 To fix this issue, lets give GitHub Copilot an upgrade by enabling Model Context Protocol (MCP). To be more specific, we will add the GitHub MCP server, which will enable a combined workflow of issue management and website upgrades. 🧑‍🚀
+Nossos colegas professores têm muitas ideias, mas parece que não conseguimos acompanhar todas as solicitações! 😮 Para resolver esse problema, vamos dar um upgrade ao GitHub Copilot habilitando o Model Context Protocol (MCP). Para ser mais específico, vamos adicionar o servidor GitHub MCP, que habilitará um fluxo de trabalho combinado de gerenciamento de issues e upgrades do site. 🧑‍🚀
 
-Let's get started!
+Vamos começar!
 
-### What is Model Context Protocol (MCP)?
+### O que é Model Context Protocol (MCP)?
 
-[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is often referred to as "USB-C for AI" - a universal connector that allows GitHub Copilot (and other AI tools) to seamlessly interact with other services.
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) é frequentemente chamado de "USB-C para IA" - um conector universal que permite ao GitHub Copilot (e outras ferramentas de IA) interagir perfeitamente com outros serviços.
 
-Essentially, it is a way to describe the capabilities and requirements of a service, so AI tools can easily determine what methods to use and to accurately provide the parameters. An MCP server is providing that interface.
+Essencialmente, é uma forma de descrever as capacidades e requisitos de um serviço, para que ferramentas de IA possam facilmente determinar quais métodos usar e fornecer os parâmetros com precisão. Um servidor MCP está fornecendo essa interface.
 
 ```mermaid
 graph LR
@@ -27,7 +27,7 @@ graph LR
 
     style B fill:#4CAF50,stroke:#333,stroke-width:2px
 
-    subgraph "Less Context Switching, More Coding"
+    subgraph "Menos Mudança de Contexto, Mais Programação"
         B
         MCP
         C
@@ -37,41 +37,41 @@ graph LR
     end
 ```
 
-### :keyboard: Activity: Get to know your environment
+### :keyboard: Atividade: Conheça seu ambiente
 
-Before we dive into MCP, let's start up our development environment and refamiliarize ourself with the extracurricular activity application.
+Antes de mergulharmos no MCP, vamos iniciar nosso ambiente de desenvolvimento e nos refamiliarizar com a aplicação de atividades extracurriculares.
 
-1. Right-click the below button to open the **Create Codespace** page in a new tab. Use the default configuration.
+1. Clique com o botão direito no botão abaixo para abrir a página **Criar Codespace** em uma nova aba. Use a configuração padrão.
 
-   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
+   [![Abrir no GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
 
-1. Validate the **Copilot Chat** and **Python** extensions are installed and enabled.
+1. Valide se as extensões **Copilot Chat** e **Python** estão instaladas e habilitadas.
 
    <img width="300" alt="copilot extension for VS Code" src="https://github.com/user-attachments/assets/ef1ef984-17fc-4b20-a9a6-65a866def468" /><br/>
    <img width="300" alt="python extension for VS Code" src="https://github.com/user-attachments/assets/3040c0f5-1658-47e2-a439-20504a384f77" />
 
-1. Verify our application runs before modification. In the left sidebar, select the **Run and Debug** tab and then press the **Start Debugging** icon.
+1. Verifique se nossa aplicação roda antes da modificação. Na barra lateral esquerda, selecione a aba **Executar e Depurar** e então pressione o ícone **Iniciar Depuração**.
 
    <details>
-   <summary>📸 Show screenshot</summary><br/>
+   <summary>📸 Mostrar captura de tela</summary><br/>
 
    <img width="300" alt="run and debug" src="https://github.com/user-attachments/assets/50b27f2a-5eab-4827-9343-ab5bce62357e" />
 
    </details>
 
    <details>
-   <summary>🤷 Having trouble?</summary><br/>
+   <summary>🤷 Tendo problemas?</summary><br/>
 
-   If the **Run and Debug** area is empty, try reloading VS Code: Open the command palette (`Ctrl`+`Shift`+`P`) and search for `Developer: Reload Window`.
+   Se a área **Executar e Depurar** estiver vazia, tente recarregar o VS Code: Abra a paleta de comandos (`Ctrl`+`Shift`+`P`) e procure por `Developer: Reload Window`.
 
    <img width="300" alt="empty run and debug panel" src="https://github.com/user-attachments/assets/0dbf1407-3a97-401a-a630-f462697082d6" />
 
    </details>
 
-1. Use the **Ports** tab to find the webpage address, open it, and verify it is running.
+1. Use a aba **Portas** para encontrar o endereço da página web, abra-a e verifique se está funcionando.
 
    <details>
-   <summary>📸 Show screenshot</summary><br/>
+   <summary>📸 Mostrar captura de tela</summary><br/>
 
    <img width="350" alt="ports tab" src="https://github.com/user-attachments/assets/8d24d6b5-202d-4109-8174-2f0d1e4d8d44" />
 
@@ -79,24 +79,24 @@ Before we dive into MCP, let's start up our development environment and refamili
 
    </details>
 
-### :keyboard: Activity: Add the GitHub MCP server
+### :keyboard: Atividade: Adicionar o servidor GitHub MCP
 
-1. Inside your codespace, open the **Copilot Chat** panel and verify **Agent** mode is selected.
+1. Dentro do seu codespace, abra o painel **Copilot Chat** e verifique se o modo **Agente** está selecionado.
 
    <img width="200" alt="image" src="https://github.com/user-attachments/assets/201e08ab-14a0-48bf-824e-ba4f8f43f8ab" />
 
    <details>
-   <summary>Agent mode missing?</summary><br/>
+   <summary>Modo Agente ausente?</summary><br/>
 
-   - Verify VS Code is at least `v1.99.0`.
-   - Verify the Copilot extension is at least `v1.296.0`.
-   - Check if Agent mode is enabled in your [user or workspace settings](https://code.visualstudio.com/docs/configure/settings#_workspace-settings).
+   - Verifique se o VS Code está pelo menos na versão `v1.99.0`.
+   - Verifique se a extensão Copilot está pelo menos na versão `v1.296.0`.
+   - Verifique se o modo Agente está habilitado nas suas [configurações de usuário ou workspace](https://code.visualstudio.com/docs/configure/settings#_workspace-settings).
 
       <img width="300" alt="image" src="https://github.com/user-attachments/assets/407a79dd-707e-471b-b56b-1938aece4ad8" />
 
    </details>
 
-1. Inside your codespace, navigate to the `.vscode` folder, and create a new file named `mcp.json`. Paste the following contents:
+1. Dentro do seu codespace, navegue até a pasta `.vscode` e crie um novo arquivo chamado `mcp.json`. Cole o seguinte conteúdo:
 
    📄 **.vscode/mcp.json**
 
@@ -111,7 +111,7 @@ Before we dive into MCP, let's start up our development environment and refamili
    }
    ```
 
-1. In the `.vscode/mcp.json` file, click the **Start** button and accept the prompt to authenticate with GitHub. This has just informed GitHub Copilot of the MCP server's capabilities.
+1. No arquivo `.vscode/mcp.json`, clique no botão **Iniciar** e aceite o prompt para autenticar com o GitHub. Isso acabou de informar o GitHub Copilot sobre as capacidades do servidor MCP.
 
    <img width="350" alt="mcp.json file showing start button" src="https://github.com/user-attachments/assets/0361a2ff-3fb3-428a-9cbc-d004a618afc8" />
 
@@ -119,27 +119,27 @@ Before we dive into MCP, let's start up our development environment and refamili
 
    <img width="350" alt="mp.json file showing running server" src="https://github.com/user-attachments/assets/f61937a1-dcc3-49d6-bf7c-9a9108b8e2ae" />
 
-1. In the Copilot side panel, click the **🛠️ icon** to show the additional capabilities.
+1. No painel lateral do Copilot, clique no **ícone 🛠️** para mostrar as capacidades adicionais.
 
    <img width="350" alt="image" src="https://github.com/user-attachments/assets/b1be8b80-c69c-4da5-9aea-4bbaa1c6de10" />
 
    <img width="350" alt="image" src="https://github.com/user-attachments/assets/99178d1b-adbe-4cf4-ab9c-3a4d29918a13" />
 
-1. **Commit** and **push** the `.vscode/mcp.json` file to the `main` branch.
+1. **Faça commit** e **push** do arquivo `.vscode/mcp.json` para a branch `main`.
 
-   > 🪧 **Note:** Pushing directly to `main` is not a recommended practice. It is only to simplify this exercise.
+   > 🪧 **Nota:** Fazer push diretamente para `main` não é uma prática recomendada. É apenas para simplificar este exercício.
 
-1. Now that your MCP server configuration is pushed to GitHub, Mona should already be busy checking your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+1. Agora que sua configuração do servidor MCP foi enviada para o GitHub, a Mona já deve estar ocupada verificando seu trabalho. Dê um momento para ela e fique de olho nos comentários. Você verá ela responder com informações de progresso e a próxima lição.
 
 > [!NOTE]
-> The next steps will involve creating GitHub issues. If you would like to avoid notification emails, you can unwatch the repository.
+> Os próximos passos envolverão criar issues do GitHub. Se você quiser evitar emails de notificação, pode parar de acompanhar o repositório.
 
 <details>
-<summary>Having trouble?</summary><br/>
+<summary>Tendo problemas?</summary><br/>
 
-Make sure:
+Certifique-se de que:
 
-- Your `.vscode/mcp.json` file is similar to the example provided.
-- You pushed the changes to the `main` branch.
+- Seu arquivo `.vscode/mcp.json` é similar ao exemplo fornecido.
+- Você fez push das mudanças para a branch `main`.
 
 </details>
