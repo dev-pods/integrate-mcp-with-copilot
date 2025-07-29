@@ -16,7 +16,7 @@ env:
 jobs:
   find_exercise:
     name: Find Exercise Issue
-    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.6.0
+    uses: dev-pods/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.1.1
 
   check_step_work:
     name: Check step work
@@ -34,9 +34,9 @@ jobs:
       - name: Get response templates
         uses: actions/checkout@v4
         with:
-          repository: skills/exercise-toolkit
+          repository: dev-pods/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.6.0
+          ref: v0.1.1
 
       - name: Update comment - checking work
         run: |
@@ -52,7 +52,7 @@ jobs:
 
       - name: Build message - step mistake
         id: build-message-step-mistake
-        uses: skills/action-text-variables@v1
+        uses: dev-pods/action-text-variables@v0.0.1
         with:
           template-file: exercise-toolkit/markdown-templates/step-feedback/step-mistake.md
           template-vars: |
@@ -88,7 +88,7 @@ jobs:
 
       - name: Build message - step finished
         id: build-message-step-finish
-        uses: skills/action-text-variables@v1
+        uses: dev-pods/action-text-variables@v0.0.1
         with:
           template-file: exercise-toolkit/markdown-templates/step-feedback/step-finished-prepare-next-step.md
           template-vars: |
@@ -116,13 +116,13 @@ jobs:
       - name: Get response templates
         uses: actions/checkout@v4
         with:
-          repository: skills/exercise-toolkit
+          repository: dev-pods/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.6.0
+          ref: v0.1.1
 
       - name: Build comment - add step content
         id: build-comment
-        uses: skills/action-text-variables@v1
+        uses: dev-pods/action-text-variables@v0.0.1
         with:
           template-file: ${{ env.STEP_4_FILE }}
           template-vars: |
